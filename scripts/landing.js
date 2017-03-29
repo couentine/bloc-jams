@@ -13,7 +13,7 @@ forEach(points,revealPoint)
  
  
  };
- }
+ 
 
  window.onload = function() {
      

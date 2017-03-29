@@ -27,6 +27,28 @@ var albumPicasso = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+
+var albumAcdc = {
+    title: 'Back In Black',
+    artist: 'AC-DC',
+    label: 'Epic/Lagacy',
+    year: '1980',
+    albumArtUrl: 'assets/images/album_covers/23.png',
+    songs: [
+        {title: 'Hells Bells', duration: '5:12'},
+        {title: 'Shoot to Thrill', duration: '5:17'},
+        {title: 'What Do you Do for Money Honey', duration: '3:35'},
+        {title: 'Giving the Dog a Bone', duration: '3:31'},
+        {title: 'Let Put My Love Into You', duration: '4:15'},
+        {title: 'Back In Black', duration: '4:15'},
+        {title: 'You Shook Me All Night Long', duration: '3:30'},
+        {title: 'Have a Drink on Me', duration: '3:58'},
+        {title: 'Shake a Leg', duration: '4:05'},
+        {title: 'Rock and Roll Ain\'t Noise Pollution', duration: '4:26'},
+        
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -38,13 +60,16 @@ var createSongRow = function(songNumber, songName, songLength) {
  
      return template;
  };
-var setCurrentAlbum = function(album) {
+
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
+ var setCurrentAlbum = function(album) {
      // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
  
      // #2
      albumTitle.firstChild.nodeValue = album.title;
@@ -61,6 +86,19 @@ var setCurrentAlbum = function(album) {
      }
  };
  
+
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
+     var albums = [albumPicasso, albumMarconi, albumAcdc];
+     var index = 0;
+     
+     albumImage.addEventListener("click", function(event){
+         setCurrentAlbum(albums[index]);
+         index++;
+         if (index == albums.length){
+             index=0;
+         }
+    });
+
  };
