@@ -35,16 +35,16 @@ var albumAcdc = {
     year: '1980',
     albumArtUrl: 'assets/images/album_covers/22.jpg',
     songs: [
-        {title: 'Hells Bells', duration: '5:12'},
-        {title: 'Shoot to Thrill', duration: '5:17'},
-        {title: 'What Do you Do for Money Honey', duration: '3:35'},
-        {title: 'Giving the Dog a Bone', duration: '3:31'},
-        {title: 'Let Put My Love Into You', duration: '4:15'},
-        {title: 'Back In Black', duration: '4:15'},
-        {title: 'You Shook Me All Night Long', duration: '3:30'},
-        {title: 'Have a Drink on Me', duration: '3:58'},
-        {title: 'Shake a Leg', duration: '4:05'},
-        {title: 'Rock and Roll Ain\'t Noise Pollution', duration: '4:26'},
+        {title: 'Hells Bells', duration: '5:12' , audioUrl: 'assets/music/acdc/Hells Bells' },
+        {title: 'Shoot to Thrill', duration: '5:17', audioUrl: 'assets/music/adc/Shoot to Thrill' },
+        {title: 'What Do you Do for Money Honey', duration: '3:35', audioUrl: 'assets/music/acdc/What Do you Do for Money Honey' },
+        {title: 'Giving the Dog a Bone', duration: '3:31', audioUrl: 'assets/music/acdc/Giving the Dog a Bone' },
+        {title: 'Let Put My Love Into You', duration: '4:15', audioUrl: 'assets/music/acdc/Let Put My Love Into You' },
+        {title: 'Back In Black', duration: '4:15', audioUrl: 'assets/music/acdc/Back In Black' },
+        {title: 'You Shook Me All Night Long', duration: '3:30', audioUrl: 'assets/music/acdc/You Shook Me All Night Long' },
+        {title: 'Have a Drink on Me', duration: '3:58', audioUrl: 'assets/music/acdc/Have a Drink on Me' },
+        {title: 'Shake a Leg', duration: '4:05', audioUrl: 'assets/music/acdc/Shake a Leg' },
+        {title: 'Rock and Roll Ain\'t Noise Pollution', duration: '4:26', audioUrl: 'assets/music/acdc/Rock and Roll Ain\'t Noise Pollution' },
         
     ]
 };
